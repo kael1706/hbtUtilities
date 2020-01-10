@@ -8,6 +8,6 @@ This reposority porvide script or files that can be usefull for students of holb
 |hbtgm| create the all main(.c or .py) for holberton proyect|
 |.vimrc| file of configuration |
 
-##Author
+## Author
 @kael1706
-##Collaborators
+## Collaborators
