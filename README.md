@@ -1,8 +1,8 @@
-#Holberton Utilities
+# Holberton Utilities
 
 This reposority porvide script or files that can be usefull for students of holberton
 
-##List of scripts or files
+## List of scripts or files
 
 | Name | Description  |
 |---|---|
