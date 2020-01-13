@@ -5,24 +5,33 @@
 # feel free to edit the script with your preferences
 # Author: @kael1706
 # Contributor:
-echo how many mains you need create?:
-read n
+echo start index:
+read s
+echo end index:
+read e
+echo Do you want empty main?yes or no:
+read empty
 echo .c or .py?:
 read t
 import_c=('#include <stdio.h>' '#include <stdlib.h>')
-while ((n != 0))
+while ((s <= e))
 do
- ((n = n - 1))
  if [ "$t" = ".py" ]; then
-  touch "$n-main.py"
-  echo '#!/usr/bin/python3' > "$n-main.py"
-  echo $'namefunction = __import__(\'nameModule\').nameFunction\n'  >> "$n-main.py"
-  echo "File $n-main.py created"
+  touch "$s-main.py"
+  echo '#!/usr/bin/python3' > "$s-main.py"
+  if [ "$empty" = "no" ]; then
+   echo $'namefunction = __import__(\'nameModule\').nameFunction'  >> "$s-main.py"
+  fi
+  echo "File $s-main.py created"
  else
-  touch "$n-main.c"
-  echo ${import_c[0]} > "$n-main.c"
-  echo $'/**\n * main - check the code for Holberton School students.\n *\n * Return: 0\n*/' >> "$n-main.c"
-  echo $'int main(void)\n{\n\treturn (0);\n}\n' >> "$n-main.c"
-  echo "File $n-main.c created"
+  touch "$s-main.c"
+  echo ${import_c[0]} > "$s-main.c"
+  if [ "$empty" = "no" ]; then
+   echo $'/**\n * main - check the code for Holberton School students.\n *\n * Return: 0\n*/' >> "$s-main.c"
+   echo $'int main(void)\n{\n\treturn (0);\n}' >> "$s-main.c"
+  fi
+  echo "File $s-main.c created"
  fi
+ ((s = s + 1))
+ echo $s
 done
