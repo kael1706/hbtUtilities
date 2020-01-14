@@ -33,5 +33,4 @@ do
   echo "File $s-main.c created"
  fi
  ((s = s + 1))
- echo $s
 done
