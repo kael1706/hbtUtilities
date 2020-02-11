@@ -12,6 +12,7 @@ cd ./hipposcraper/
 echo "moving to:"
 pwd
 /bin/bash ./setup.sh
+cd ~
 source .bashrc
 echo "********END**********"
 echo "*********************"
